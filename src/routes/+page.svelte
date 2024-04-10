@@ -1,2 +1,32 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Generic from '$lib/components/cards/impl/Generic.svelte';
+
+	import SvelteSeo from 'svelte-seo';
+</script>
+
+<SvelteSeo
+	title="Simonyi Konferencia az előző években"
+	description="Ez előző évek Simonyi Konferenciáinak összefoglalója. Itt megtalálod az előző évek programjait, előadóit és minden fontos információt."
+/>
+
+<div class="grid gap-16">
+	<section>
+		<h1 class="text-7xl font-semibold tracking-tight text-center font-dm-sans">
+			Simonyi Konferencia
+		</h1>
+		<h2 class="text-center tracking-wider text-xl">az előző években</h2>
+	</section>
+
+	<section class="pageLayout">
+		<Generic title="XXI" year={2024} iconName={'xxi.svg'} />
+		<Generic title="XX" year={2023} iconName={'xx.svg'} />
+		<Generic title="XIX" year={2022} iconName={'xix.svg'} />
+		<Generic title="XVIII" year={2021} iconName={'xviii.svg'} />
+	</section>
+</div>
+
+<style lang="postcss">
+	.pageLayout {
+		@apply grid md:grid-cols-2 gap-8 w-full;
+	}
+</style>
