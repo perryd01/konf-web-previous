@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { XX, XVIII, XIX, XXI } from '$lib/components/cards/impl';
 	import Generic from '$lib/components/cards/impl/Generic.svelte';
 
 	import SvelteSeo from 'svelte-seo';
@@ -18,10 +19,10 @@
 	</section>
 
 	<section class="pageLayout">
-		<Generic title="XXI" year={2024} iconName={'xxi.svg'} />
-		<Generic title="XX" year={2023} iconName={'xx.svg'} />
-		<Generic title="XIX" year={2022} iconName={'xix.svg'} />
-		<Generic title="XVIII" year={2021} iconName={'xviii.svg'} />
+		<XXI />
+		<XX />
+		<XIX />
+		<XVIII />
 	</section>
 </div>
 

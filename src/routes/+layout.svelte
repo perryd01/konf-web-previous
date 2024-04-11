@@ -16,7 +16,7 @@
 
 <style lang="postcss">
 	div {
-		@apply font-inter bg-[#111111] text-white flex flex-col justify-between px-4 py-8 min-h-screen gap-8;
+		@apply font-inter bg-[#111111] text-white flex flex-col justify-between px-6 py-8 min-h-screen gap-8;
 	}
 
 	main {
