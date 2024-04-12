@@ -7,7 +7,8 @@
 	const props: GenericPropsType = {
 		title: 'XXI',
 		year: 2024,
-		iconName: 'xxi.svg'
+		iconName: 'xxi.svg',
+		href: 'https://konferencia.simonyi.bme.hu'
 	};
 </script>
 
