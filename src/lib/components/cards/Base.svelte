@@ -10,6 +10,6 @@
 
 <style lang="postcss">
 	.card {
-		@apply rounded-xl w-full h-full min-h-96 overflow-hidden;
+		@apply rounded-xl w-full h-full aspect-square overflow-hidden;
 	}
 </style>
