@@ -12,7 +12,7 @@
 
 <div class="grid gap-16">
 	<section>
-		<h1 class="text-7xl font-semibold tracking-tight text-center font-dm-sans">
+		<h1 class="text-5xl lg:text-7xl font-semibold tracking-tight text-center font-dm-sans">
 			Simonyi Konferencia
 		</h1>
 		<h2 class="text-center tracking-wider text-xl">az előző években</h2>
