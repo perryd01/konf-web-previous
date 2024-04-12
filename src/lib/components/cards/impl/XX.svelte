@@ -1,11 +1,9 @@
 <script lang="ts">
 	import Card from '../index';
 
-	import type { ComponentProps } from 'svelte';
+	import type { GenericPropsType } from './types';
 
-	const props: ComponentProps<typeof Card.Body> & {
-		iconName: string;
-	} = {
+	const props: GenericPropsType = {
 		title: 'XX',
 		year: 2023,
 		iconName: 'xx_color.svg'

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Card from '../index';
+	import type { GenericPropsType } from './types';
 
 	const bg = '#d1eaeb';
 
-	const props = {
+	const props: GenericPropsType = {
 		title: 'XIX',
 		year: 2022,
 		iconName: 'xix_color.svg'
