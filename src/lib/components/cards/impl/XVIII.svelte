@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Card from '../index';
 	import type { GenericPropsType } from './types';
-	import { draw } from 'svelte/transition';
+	import { draw, scale } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { expand } from '$lib/utils/custom-transitions';
 	import paths from './svgPaths';
@@ -31,7 +31,7 @@
 		}, 1000);
 	});
 
-	const svgPath = paths['18'];
+	const svgProps = paths['18'];
 </script>
 
 <Card.Body {...cardBodyProps}>
@@ -50,7 +50,7 @@
 						>
 							<path
 								in:draw={{ duration: 3000 }}
-								d={svgPath.one}
+								d={svgProps.path.one}
 								style="stroke:#fff; stroke-width: 1.5"
 								out:draw={{ duration: 1000 }}
 							/>
@@ -58,13 +58,13 @@
 							<path
 								in:expand={{ duration: 1000, easing: quintOut, delay: 3000 }}
 								style="fill: #fff"
-								d={svgPath.one}
+								d={svgProps.path.one}
 								out:expand={{ duration: 300, easing: quintOut }}
 							/>
 
 							<path
 								in:draw={{ duration: 3000 }}
-								d={svgPath.eight}
+								d={svgProps.path.eight}
 								style="stroke:#fff; stroke-width: 1.5"
 								out:draw={{ duration: 1000 }}
 							/>
@@ -72,7 +72,7 @@
 							<path
 								in:expand={{ duration: 1000, easing: quintOut, delay: 3000 }}
 								style="fill: #fff"
-								d={svgPath.eight}
+								d={svgProps.path.eight}
 								out:expand={{ duration: 300, easing: quintOut }}
 							/>
 						</svg>
@@ -81,10 +81,35 @@
 			</div>
 		</div>
 	</div>
+	<div class="absolute top-0 left-0 size-full z-0">
+		{#if !firstDraw}
+			<svg
+				height="112"
+				width="112"
+				fill={svgProps.colors.green.DEFAULT}
+				class="absolute -top-4 -right-16 group-hover:scale-150 transition-transform"
+				in:scale={{ duration: 1000 }}
+			>
+				<circle cx="50%" cy="50%" r="55" />
+			</svg>
+			<svg
+				height="400"
+				width="400"
+				fill={svgProps.colors.red.DEFAULT}
+				class="absolute -bottom-32 -left-32 group-hover:scale-150 transition-transform"
+				in:scale={{ duration: 1000 }}
+			>
+				<circle cx="50%" cy="50%" r="145" />
+			</svg>
+			<svg
+				height="250"
+				width="255"
+				fill={svgProps.colors.yellow.DEFAULT}
+				class="absolute -bottom-32 -right-32 group-hover:scale-150 transition-transform"
+				in:scale={{ duration: 1000 }}
+			>
+				<circle cx="50%" cy="50%" r="100" />
+			</svg>
+		{/if}
+	</div>
 </Card.Body>
-
-<style lang="postcss">
-	img {
-		@apply select-none w-full h-full;
-	}
-</style>
