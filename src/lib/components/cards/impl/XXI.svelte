@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Card from '../index';
 	import type { GenericPropsType } from './types';
 
@@ -10,9 +11,21 @@
 		iconName: 'xxi.svg',
 		href: 'https://konferencia.simonyi.bme.hu'
 	};
+
+	const cardBodyProps = {
+		title: props.title,
+		year: props.year,
+		href: props.href
+	};
+
+	let draw = false;
+
+	onMount(() => {
+		draw = true;
+	});
 </script>
 
-<Card.Body {...props}>
+<Card.Body {...cardBodyProps}>
 	<div class="size-full" style="background-color: {bg};">
 		<div class="size-full group bg transition">
 			<div class="h-full w-full flex flex-col justify-center">

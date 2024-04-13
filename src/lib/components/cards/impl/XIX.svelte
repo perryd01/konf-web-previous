@@ -9,9 +9,16 @@
 		year: 2022,
 		iconName: 'xix_color.svg'
 	};
+
+	const cardBodyProps = {
+		title: props.title,
+		year: props.year,
+		href: props.href,
+		light: true
+	};
 </script>
 
-<Card.Body {...props} light={true}>
+<Card.Body {...cardBodyProps}>
 	<div class="size-full" style="background-color: {bg};">
 		<div class="size-full group bg transition">
 			<div class="h-full w-full flex flex-col justify-center">
