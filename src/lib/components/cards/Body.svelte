@@ -5,7 +5,7 @@
 	export let year = 2023;
 	export let light = false;
 
-	export let href: string | undefined;
+	export let href: string | undefined = undefined;
 </script>
 
 <a href={href ?? `https://${year}.konferencia.simonyi.bme.hu`} target="_blank">
