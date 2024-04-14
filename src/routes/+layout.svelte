@@ -10,7 +10,7 @@
 
 <SvelteSeo
 	title="Simonyi Konferencia az előző években"
-	description="Ez előző évek Simonyi Konferenciáinak összefoglalója. Itt megtalálod az előző évek programjait, előadóit és minden fontos információt."
+	description="Az előző évek Simonyi Konferenciáinak összefoglalója. Itt megtalálod az előző évek programjait, előadóit és minden fontos információt."
 	openGraph={{
 		title: 'Simonyi Konferencia az előző években',
 		description:
