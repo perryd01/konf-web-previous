@@ -1,14 +1,7 @@
 <script lang="ts">
 	import { XX, XVIII, XIX, XXI } from '$lib/components/cards/impl';
 	import Generic from '$lib/components/cards/impl/Generic.svelte';
-
-	import SvelteSeo from 'svelte-seo';
 </script>
-
-<SvelteSeo
-	title="Simonyi Konferencia az előző években"
-	description="Ez előző évek Simonyi Konferenciáinak összefoglalója. Itt megtalálod az előző évek programjait, előadóit és minden fontos információt."
-/>
 
 <div class="grid gap-16">
 	<section>
