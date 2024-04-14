@@ -1,5 +1,19 @@
 # konf-web-previous
 
+## 0.3.0
+
+### Minor Changes
+
+- 164cbe1: ## Added
+
+  - Fade animation on load for XXI card.
+
+### Patch Changes
+
+- 2ea0f10: ### Fixed
+
+  - Warnings when passing invalid properties to Card.Body component
+
 ## 0.2.0
 
 ### Minor Changes
