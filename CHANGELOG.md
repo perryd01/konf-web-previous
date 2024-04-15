@@ -1,5 +1,11 @@
 # konf-web-previous
 
+## 0.3.1
+
+### Patch Changes
+
+- Optimize XX card background pattern svg to decrease size from 73.06 kB to 22.75 kB.
+
 ## 0.3.0
 
 ### Minor Changes
