@@ -1,5 +1,11 @@
 # konf-web-previous
 
+## 0.3.2
+
+### Patch Changes
+
+- 4e601d8: Optimize font loading by selecting only required letters.
+
 ## 0.3.1
 
 ### Patch Changes
