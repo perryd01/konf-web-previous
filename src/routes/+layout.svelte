@@ -4,7 +4,20 @@
 	import { Footer } from '$lib/components/layout';
 
 	const version = __PACKAGE__.version as string;
+
+	import SvelteSeo from 'svelte-seo';
 </script>
+
+<SvelteSeo
+	title="Simonyi Konferencia az előző években"
+	description="Az előző évek Simonyi Konferenciáinak összefoglalója. Itt megtalálod az előző évek programjait, előadóit és minden fontos információt."
+	openGraph={{
+		title: 'Simonyi Konferencia az előző években',
+		description:
+			'Az előző évek Simonyi Konferenciáinak összefoglalója. Itt megtalálod az előző évek programjait, előadóit és minden fontos információt.',
+		image: '/preview.webp'
+	}}
+/>
 
 <div>
 	<main>
