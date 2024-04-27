@@ -1,5 +1,11 @@
 # konf-web-previous
 
+## 0.4.0
+
+### Minor Changes
+
+- Add animation to XX card
+
 ## 0.3.2
 
 ### Patch Changes

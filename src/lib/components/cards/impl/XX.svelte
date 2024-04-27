@@ -14,6 +14,19 @@
 		year: props.year,
 		href: props.href
 	};
+
+	import { draw, fade, slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
+
+	let drawCondition = false;
+	let firstDraw = true;
+
+	onMount(() => {
+		setTimeout(() => {
+			drawCondition = !drawCondition;
+			firstDraw = false;
+		}, 1000);
+	});
 </script>
 
 <Card.Body {...cardBodyProps}>
@@ -21,14 +34,24 @@
 		<div class="size-full group bg transition">
 			<div class="h-full w-full flex flex-col justify-center">
 				<div class="relative p-8 select-none z-40">
-					<img src={`./logos/${props.iconName}`} alt={props.title} draggable="false" />
+					{#if drawCondition}
+						<img
+							transition:fade={{ duration: 1000, delay: 1000 }}
+							src={`./logos/${props.iconName}`}
+							alt={props.title}
+							draggable="false"
+						/>
+					{/if}
 				</div>
 			</div>
-			<img
-				class="absolute top-0 left-0 h-full w-full object-cover"
-				alt="pattern"
-				src="/pattern.svg"
-			/>
+			{#if drawCondition}
+				<img
+					transition:fade={{ duration: 1000 }}
+					class="absolute top-0 left-0 h-full w-full object-cover"
+					alt="pattern"
+					src="/pattern.svg"
+				/>
+			{/if}
 		</div>
 	</div>
 </Card.Body>
